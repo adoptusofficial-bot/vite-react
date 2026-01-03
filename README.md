@@ -1,21 +1,29 @@
-# React + TypeScript + Vite
+# JEE CBT Mock (Vite + React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a self-contained mock CBT site for practice. No backend — everything is local JSON and localStorage.
 
-While this project uses React, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
+## Run locally
 
-## Deploy Your Own
+1. Install dependencies:
+   ```
+   npm install
+   ```
+2. Run dev server:
+   ```
+   npm run dev
+   ```
 
-Deploy your own Vite project with Vercel.
+Open http://localhost:5173
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/framework-boilerplates/vite-react&template=vite-react)
+## Login
+Users are in `src/data/users.json` (username/password). Edit to add users.
 
-_Live Example: https://vite-react-example.vercel.app_
+## Questions
+Questions are in `src/data/questions.json`. Edit to change questions. Format supports `mcq` (with `options` and `answer` as "A"/"B"/"C"/"D") and `integer` with `answer` string.
 
-### Deploying From Your Terminal
+## Scoring
++4 correct, -1 incorrect, 0 skipped.
 
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
+## Deploy to Vercel
+Push to a git repo and connect to Vercel. Build command: `npm run build`, Output directory: `dist`.
 
-```shell
-$ vercel
-```
